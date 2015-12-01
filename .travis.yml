@@ -1,0 +1,7 @@
+language: clojure
+jdk:
+- oraclejdk8
+script:
+- lein test
+after_success:
+- echo "reporting coverage"
