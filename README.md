@@ -24,9 +24,7 @@ after_success:
 CLOVERAGE_VERSION=1.0.7-SNAPSHOT lein cloverage --codecov
 ```
 
-This repository contains a simple Clojure library with codecov.io integration.
-
-It uses [cloverage with the @dlobue's codecov.io reporter](https://github.com/lshift/cloverage/pull/78).
+This uses [cloverage with the @dlobue's codecov.io reporter](https://github.com/lshift/cloverage/pull/78).
 
 ## Support
 
