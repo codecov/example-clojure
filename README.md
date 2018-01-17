@@ -11,7 +11,7 @@ language: clojure
 
 after_success:
 - CLOVERAGE_VERSION=1.0.7-SNAPSHOT lein cloverage --codecov
-- bash <(curl -s https://codecov.io/bash) -f target/coverage/codecov.json
+- bash <(curl -s https://codecov.io/bash)
 ```
 ### Producing Coverage Reports
 > Add to your `project.clj`
