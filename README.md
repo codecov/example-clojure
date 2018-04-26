@@ -26,14 +26,6 @@ CLOVERAGE_VERSION=1.0.7-SNAPSHOT lein cloverage --codecov
 
 This uses [cloverage with the @dlobue's codecov.io reporter](https://github.com/lshift/cloverage/pull/78).
 
-## Support
-
-### Contact
-- Intercom (in-app messanger)
-- Email: [support@codecov.io](mailto:support@codecov.io)
-- Slack: [slack.codecov.io](https://slack.codecov.io)
-- [gh/codecov/support](https://github.com/codecov/support)
-
 1. More documentation at https://docs.codecov.io
 2. Configure codecov through the `codecov.yml`  https://docs.codecov.io/docs/codecov-yaml
 
