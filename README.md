@@ -43,4 +43,6 @@ MIT.
 
 Originally authored by [Jakub Elżbieciak](https://elzbieciak.pl/).
 
+We are happy to help if you have any questions. Please contact email our Support at [support@codecov.io](mailto:support@codecov.io)
+
 [1]: https://codecov.io/
