@@ -17,11 +17,11 @@ after_success:
 > Add to your `project.clj`
 
 ```clojure
-:plugins [[lein-cloverage "1.0.7-SNAPSHOT"]]
+:plugins [[lein-cloverage "1.1.1"]]
 ```
 
 ```
-CLOVERAGE_VERSION=1.0.7-SNAPSHOT lein cloverage --codecov
+CLOVERAGE_VERSION=1.1.1 lein cloverage --codecov
 ```
 
 This uses [cloverage with the @dlobue's codecov.io reporter](https://github.com/lshift/cloverage/pull/78).
