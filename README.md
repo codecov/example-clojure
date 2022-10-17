@@ -1,17 +1,24 @@
 # [Codecov][1] Clojure example
 
-[![Build Status](https://travis-ci.org/codecov/example-clojure.svg?branch=master)](https://travis-ci.org/codecov/example-clojure)
+[![Build Status](https://github.com/codecov/example-clojure/actions/workflows/ci.yml/badge.svg)]
 [![codecov.io](https://codecov.io/github/codecov/example-clojure/coverage.svg?branch=master)](https://codecov.io/github/codecov/example-clojure?branch=master)
 
 ## Guide
-### Travis Setup
-Add to your `.travis.yml` file.
+### GitHub Actions Step
+Add to your workflows file.
 ```yml
-language: clojure
-
-after_success:
-- CLOVERAGE_VERSION=1.0.7-SNAPSHOT lein cloverage --codecov
-- bash <(curl -s https://codecov.io/bash)
+  - name: Upload to Codecov (Action)
+    uses: codecov/codecov-action@v2
+    with:
+      token: {{ token }}
+```
+or
+```yml
+  - name: Upload to Codecov (Uploader)
+    run: |
+      curl -Os https://uploader.codecov.io/latest/linux/codecov
+      chmod +x codecov
+      ./codecov -t {{ token }}
 ```
 ### Producing Coverage Reports
 > Add to your `project.clj`
