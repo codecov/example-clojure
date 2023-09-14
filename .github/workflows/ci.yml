@@ -5,7 +5,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
-        uses: actions/checkout@v2
+        uses: actions/checkout@v4
       - name: Setup Java
         uses: actions/setup-java@v2
         with:
@@ -16,12 +16,9 @@ jobs:
         run: lein test
       - name: Cloverage
         run: CLOVERAGE_VERSION=1.1.1 lein cloverage --codecov
-      - name: Upload to Codecov (Action)
-        uses: codecov/codecov-action@v2
+      - name: Upload to Codecov
+        uses: codecov/codecov-action@v4
+        env:
+          CODECOV_TOKEN: ${{ secrets.CODECOV_ORG_TOKEN }}
         with:
           file: target/coverage/codecov.json
-      - name: Upload to Codecov (Uploader)
-        run: |
-          curl -Os https://uploader.codecov.io/latest/linux/codecov
-          chmod +x codecov
-          ./codecov -f target/coverage/codecov.json
