@@ -17,7 +17,7 @@ jobs:
       - name: Cloverage
         run: CLOVERAGE_VERSION=1.1.1 lein cloverage --codecov
       - name: Upload to Codecov
-        uses: codecov/codecov-action@v4
+        uses: codecov/codecov-action@v5
         env:
           CODECOV_TOKEN: ${{ secrets.CODECOV_ORG_TOKEN }}
         with:
